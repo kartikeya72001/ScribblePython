@@ -1,4 +1,4 @@
-var canvas = document.getElementById("draw");
+var canvas = document.getElementById("draw")
 
 var ctx = canvas.getContext("2d");
 resize();
@@ -36,10 +36,6 @@ function draw(e) {
   ctx.stroke(); // draw it!
 }
 
-function clear(){
-    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-}
-
 
 // add window event listener to trigger when window is resized
 window.addEventListener("resize", resize);
@@ -48,3 +44,7 @@ window.addEventListener("resize", resize);
 document.addEventListener("mousemove", draw);
 document.addEventListener("mousedown", setPosition);
 document.addEventListener("mouseenter", setPosition);
+
+document.getElementById("button").onclick = function() {
+  ctx.clearRect(0,0, ctx.canvas.width, ctx.canvas.height);
+}
